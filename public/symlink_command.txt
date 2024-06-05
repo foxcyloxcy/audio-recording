@@ -1,0 +1,3 @@
+make sure to got the public folder of your project (vue.js)
+
+mklink /D dynamic-folder C:\Archive
