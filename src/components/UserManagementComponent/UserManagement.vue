@@ -1,6 +1,7 @@
 <script setup>
 import api from "../../api/api";
 import Swal from "sweetalert2";
+import axios from "axios";
 </script>
 
 <template>
@@ -387,11 +388,9 @@ export default {
       }).then((result) => {
         if (result.isConfirmed) {
           api
-            .post(`del-individual-by-email`, {
-              email: userEmail,
-              indId: userIndId,
-            })
+            .delete(`del-ind-by-email-and-id/${userEmail}/${userIndId}`)
             .then(() => {
+
               Swal.fire({
                 title: "Deleted!",
                 text: `User ${userEmail} has been successfully deleted.`,
@@ -441,9 +440,7 @@ export default {
         }).then((result) => {
           if (result.isConfirmed) {
             api
-              .post(`update-individual-by-email`, {
-                email: userEmail,
-                indId: userIndId,
+              .put(`update-individual-by-email/${userEmail}/${userIndId}`, {
                 role: userRole,
                 name: userName,
                 password: userPassword,

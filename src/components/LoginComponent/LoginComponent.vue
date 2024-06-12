@@ -93,8 +93,7 @@ export default {
       //     email: this.email,
       //     password: this.password,
       //   })
-      console.log("login clicked")
-      await axios.post("http://localhost:80/login-credentials", {
+      await api.post("login-credentials", {
           email: this.email,
           password: this.password,
         })
