@@ -176,7 +176,7 @@ export default {
       });
     },
     onLogin(value) {
-      console.log(value);
+      // console.log(value);
       this.loggedIn = value.loggedInStatus;
       this.loggedInMessage = value.loggedInMessage;
       this.loggedUserId = value.userId;
