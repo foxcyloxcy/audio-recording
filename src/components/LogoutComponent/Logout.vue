@@ -24,7 +24,7 @@ export default {
     methods:{
         logOut(){
             this.loggedIn = 'no'
-            document.location.href = "/App";
+            document.location.href = "https://foxcyloxcy.github.io/call-recording/";
         },
     }
 
