@@ -14,16 +14,16 @@ import { showFlashMessage } from "../../function/flashMessage.js";
 
 <template>
   <div class="container-div">
-    <div class="heading-title-container"></div>
     <div class="input-fields-container">
       <div class="form-input-label">
+
         <div class="input-field">
           <label for="" class="input-label">Date Time From</label>
           <div class="datetime-picker-container">
             <flat-pickr
               v-model="callSearch.dateFrom"
               :config="dateTimePickerConfig_from"
-              class="inputs"
+              class="input"
             ></flat-pickr>
             <font-awesome-icon :icon="['fas', 'calendar-alt']" class="calendar-icon" />
           </div>
@@ -35,7 +35,7 @@ import { showFlashMessage } from "../../function/flashMessage.js";
             <flat-pickr
               v-model="callSearch.dateTo"
               :config="dateTimePickerConfig_to"
-              class="inputs"
+              class="input"
             ></flat-pickr>
             <font-awesome-icon :icon="['fas', 'calendar-alt']" class="calendar-icon" />
           </div>
@@ -43,17 +43,23 @@ import { showFlashMessage } from "../../function/flashMessage.js";
 
         <div class="input-field">
           <label for="" class="input-labels">Agent</label>
-          <input class="input" type="text" v-model="callSearch.agentName" />
+          <div class="input-box-container">
+            <input class="input" type="text" v-model="callSearch.agentName" />
+          </div>
         </div>
 
         <div class="input-field">
           <label for="" class="input-labels">Phone</label>
-          <input class="input" type="text" v-model="callSearch.phoneNumber" />
+          <div class="input-box-container">
+            <input class="input" type="text" v-model="callSearch.phoneNumber" />
+          </div>
         </div>
 
         <div class="input-field">
           <label for="" class="input-labels">Call ID</label>
-          <input class="input" type="text" v-model="callSearch.callId" />
+          <div class="input-box-container">
+            <input class="input" type="text" v-model="callSearch.callId" />
+          </div>
         </div>
       </div>
     </div>
@@ -384,8 +390,7 @@ export default {
 .input {
   box-shadow: 0px 2px 5px -4px rgb(206, 88, 88);
   height: 40px;
-  width: 100%;
-  max-width: 400px;
+  min-width: 100%;
   font-size: 20px;
   padding: 0 10px 0 10px;
   border-radius: 5px;
@@ -396,8 +401,6 @@ export default {
 .inputs {
   box-shadow: 0px 2px 5px -4px rgb(206, 88, 88);
   height: 40px;
-  width: 100%;
-  max-width: 400px;
   font-size: 20px;
   padding: 0 10px 0 10px;
   border-radius: 5px;
@@ -410,10 +413,16 @@ export default {
   align-items: center;
   margin-bottom: 10px;
   justify-content: flex-end;
+  width: 100%;
 }
 .datetime-picker-container {
   position: relative;
 }
+
+.input-box-container {
+  position: relative;
+}
+
 .calendar-icon {
   position: absolute;
   top: 50%;
@@ -454,6 +463,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  width: 100%;
 }
 
 .form-input {

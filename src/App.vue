@@ -79,6 +79,7 @@ import logoPath from "./assets/credit-union-of-texas-logo.svg";
 .v-tab {
   /*font-size: 1vw;*/
   text-transform: none !important;
+  outline: none;
 }
 .tab-text {
   white-space: nowrap;
@@ -86,19 +87,18 @@ import logoPath from "./assets/credit-union-of-texas-logo.svg";
 }
 .v-tabs--align-tabs-title:not(.v-slide-group--has-affixes) .v-tab:first-child {
   margin-inline-start: 0;
-  border-style: solid !important;
 }
 
-.v-tabs--align-tabs-title:not(.v-slide-group--has-affixes) .v-tab:first-child:active {
-  background-color: #e1e1e1;
+.v-tabs--align-tabs-title:not(.v-slide-group--has-affixes) .v-tab:active {
+  background-color: none;
+}
+
+.v-tabs--align-tabs-title:not(.v-slide-group--has-affixes) .v-tab:focus {
+  background-color: none;
 }
 
 .v-tabs--align-tabs-title:not(.v-slide-group--has-affixes) .v-tab:first-child:focus {
-  background-color: #e1e1e1;
-}
-
-.v-tabs--align-tabs-title:not(.v-slide-group--has-affixes) .v-tab:first-child:focus {
-  background-color: #e1e1e1;
+  background-color: none;
 }
 .image-container {
   margin: 0 0 0 30px;
