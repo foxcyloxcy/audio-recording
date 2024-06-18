@@ -18,7 +18,7 @@ import axios from "axios"
     </div>
     <div class="form-container">
       <v-sheet width="80%" class="mx-auto">
-        <h2 class="login-title">Call Recordings Login</h2>
+        <h2 class="login-title">Audio Recordings Login</h2>
         <v-form @submit.prevent="login" @keyup.enter="login">
           <div class="row">
             <label for="" class="label">Email</label>
