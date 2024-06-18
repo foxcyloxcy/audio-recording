@@ -56,7 +56,7 @@ import { showFlashMessage } from "../../function/flashMessage.js";
         </div>
 
         <div class="input-field">
-          <label for="" class="input-labels">Call ID</label>
+          <label for="" class="input-labels">Audio ID</label>
           <div class="input-box-container">
             <input class="input" type="text" v-model="callSearch.callId" />
           </div>
@@ -79,14 +79,14 @@ import { showFlashMessage } from "../../function/flashMessage.js";
         <thead>
           <tr>
             <th>Num</th>
-            <th>Call ID</th>
+            <th>Audio ID</th>
             <th>Date Time</th>
             <th>Agent</th>
             <th>Phone(From)</th>
             <th>Phone(To)</th>
             <th>Play</th>
             <th>Save</th>
-            <th>Call Recording File</th>
+            <th>Audio Recording File</th>
           </tr>
         </thead>
         <tbody v-if="calls.length > 0">
