@@ -1,13 +1,13 @@
 <script setup>
 import api from "../../api/api.js";
-import logoPath from "../../assets/credit-union-of-texas-logo.svg";
+import logoPath from "../../assets/call-recording.png";
 import Swal from "sweetalert2";
 import axios from "axios"
 </script>
 <template>
   <div class="login-container">
     <div class="image-container">
-      <v-img width="100" :aspect-ratio="10" :src="logoPath"></v-img>
+      <v-img width="100" :aspect-ratio="5" :src="logoPath"></v-img>
       <v-alert
         v-if="alertText"
         class="alert-message"

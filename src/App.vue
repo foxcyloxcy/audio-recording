@@ -7,7 +7,7 @@ import AccountSettings from "./components/AccountSettingsComponent/AccountSettin
 
 import Swal from "sweetalert2";
 import { markRaw } from "vue";
-import logoPath from "./assets/credit-union-of-texas-logo.svg";
+import logoPath from "./assets/call-recording.png";
 </script>
 
 <template>
